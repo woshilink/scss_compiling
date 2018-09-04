@@ -1,0 +1,144 @@
+.box {
+  background: #87e0fd;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg_start', endColorstr='$bg_end',GradientType=0 );
+  /* IE6-9 */
+  -webkit-box-shadow: -1px 4px 8px -2px rgba(0, 0, 0, 0.69);
+  box-shadow: -1px 4px 8px -2px rgba(0, 0, 0, 0.69);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.button {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #000000; }
+
+.button--dark {
+  color: #cccccc;
+  background-color: #000000;
+  border-color: #ffffff; }
+
+.button {
+  font-size: 1rem; }
+  @media (min-width: 768px) {
+    .button {
+      font-size: 1.2rem; } }
+  @media (min-width: 1024px) {
+    .button {
+      font-size: 1.4rem; } }
+  @media (max-width: 320px) {
+    .button {
+      width: 400px; } }
+
+.icon-arrow-left {
+  background-image: "/images/arrow-left.svg"; }
+
+.icon-arrow-right {
+  background-image: "/images/arrow-right.svg"; }
+
+.icon-error {
+  background-image: "/images/error.svg"; }
+
+.icon-buy {
+  background-image: "/images/buy.svg"; }
+
+.col_1 {
+  background-color: #6293ed;
+  width: 100%; }
+
+.col_2 {
+  background-color: #5f92ec;
+  width: 50%; }
+
+.col_3 {
+  background-color: #5d90ec;
+  width: 33.33333%; }
+
+.col_4 {
+  background-color: #5b8fec;
+  width: 25%; }
+
+.col_5 {
+  background-color: #598dec;
+  width: 20%; }
+
+.col_6 {
+  background-color: #568ceb;
+  width: 16.66667%; }
+
+.col_7 {
+  background-color: #548aeb;
+  width: 14.28571%; }
+
+.col_8 {
+  background-color: #5289eb;
+  width: 12.5%; }
+
+.col_9 {
+  background-color: #4f87eb;
+  width: 11.11111%; }
+
+.col_10 {
+  background-color: #4d85ea;
+  width: 10%; }
+
+.grid-1 {
+  width: 100%; }
+
+.grid-2 {
+  width: 50%; }
+
+.grid-3 {
+  width: 33.33333%; }
+
+.grid-4 {
+  width: 25%; }
+
+.grid-5 {
+  width: 20%; }
+
+.grid-6 {
+  width: 16.66667%; }
+
+.grid-7 {
+  width: 14.28571%; }
+
+.grid-8 {
+  width: 12.5%; }
+
+.module-4 {
+  content: "4"; }
+
+.module-3 {
+  content: "3"; }
+
+.module-2 {
+  content: "2"; }
+
+.module-1 {
+  content: "1"; }
+
+.author-bio .photo-arnold {
+  background: image-url("avatars/arnold.png") no-repeat; }
+
+.author-bio .photo-sylvester {
+  background: image-url("avatars/sylvester.png") no-repeat; }
+
+.author-bio .photo-dolf {
+  background: image-url("avatars/dolf.png") no-repeat; }
+
+.author-bio .photo-jean {
+  background: image-url("avatars/jean.png") no-repeat; }
+
+.author-bio .photo-chuck {
+  background: image-url("avatars/chuck.png") no-repeat; }

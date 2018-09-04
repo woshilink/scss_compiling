@@ -1,0 +1,103 @@
+// .test {
+//   border-radius: none;
+// }
+
+//box-shadow
+//background-gradient
+$light-theme: (text: #333333, background: #ffffff, border: #000000);
+$dark-theme: (text: #cccccc, background: #000000, border: #ffffff);
+
+@mixin background($bg_start, $bg_mid, $bg_end ) {
+
+  background: $bg_start; /* Old browsers */
+  background: -moz-linear-gradient(top, $bg_start 0%, $bg_mid 40%, $bg_end 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,$bg_start 0%, $bg_mid 40%,$bg_end 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $bg_start 0%, $bg_mid 40%,$bg_end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg_start', endColorstr='$bg_end',GradientType=0 ); /* IE6-9 */
+
+}
+
+@mixin box_shadow($box_shadow) {
+  //box-shadow
+  -webkit-box-shadow: $box_shadow;
+  box-shadow: $box_shadow;
+}
+
+
+@mixin flexbox_essential($align_items, $justify_content) {
+
+-webkit-box-align: $align_items;
+    -ms-flex-align: $align_items;
+        align-items: $align_items;
+-webkit-box-pack: $justify_content;
+    -ms-flex-pack: $justify_content;
+        justify-content: $justify_content;
+}
+
+// extend/ inheritance
+%flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// Variable arguments
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+
+//Nice Media Queries with Mixin @content
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+//Scope again
+$width: 420px;
+
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+//Each operator
+
+$icons:
+  arrow-left,
+  arrow-right,
+  error,
+  buy;
+
+// For operator
+$class: col_;
+
+// while loop
+$num: 4;
+
+// each loop
+$list: arnold,
+       sylvester,
+       dolf,
+       jean,
+       chuck;
+
+ @mixin author-imgs {
+   @each $manly-man in $list {
+     .photo-#{$manly-man} {
+         background: image-url("avatars/#{$manly-man}.png") no-repeat;
+     }
+   }
+ }

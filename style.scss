@@ -1,0 +1,80 @@
+
+@import 'mixins';
+
+.box {
+  @include background(#87e0fd, #53cbf1, #05abe0);
+  @include box_shadow(-1px 4px 8px -2px rgba(0,0,0,0.69));
+  // @extend %flexbox;
+  @include flexbox_essential(center, center);
+}
+// //background gradient
+// background: #87e0fd; /* Old browsers */
+// background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6-15 */
+// background: -webkit-linear-gradient(top, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10-25,Safari5.1-6 */
+// background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+//
+// //box-shadow
+// -webkit-box-shadow: -1px 4px 8px -2px rgba(0,0,0,0.69);
+// box-shadow: -1px 4px 8px -2px rgba(0,0,0,0.69);
+.button {
+  @include colors($light-theme...);
+}
+
+.button--dark {
+  @include colors($dark-theme...);
+}
+
+.button {
+  font-size: 1rem;
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 1.4rem;
+  }
+  @include media(320px) {
+    width: $width - 20px; // expected 300px
+  }
+}
+
+@each $icon-name in $icons {
+  .icon-#{$icon-name} {
+    background-image: '/images/#{$icon-name}.svg';
+  }
+}
+
+// loops through 100 times
+ @for $i from 1 through 10 {
+
+   // for each $col_#{i}
+   .#{$class}#{$i} {
+
+     // set the background-color to cornflowerblue and
+     // each time lighten the color slightly
+     background-color: darken(cornflowerblue, 0% + ($i / 2));
+     width: percentage(1 / $i)
+   }
+ }
+
+ @for $i from 1 through 8 {
+    $width: percentage(1 / $i);
+
+    .grid-#{$i} {
+        width: $width;
+    }
+}
+
+@while $num > 0 {
+    .module-#{$num} {
+        content: "#{$num}";
+    }
+
+    $num: $num - 1;
+}
+
+.author-bio {
+    @include author-imgs();
+}
