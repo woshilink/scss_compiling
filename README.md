@@ -25,4 +25,4 @@ Steps to build
   When we run this script it will watch every .scss file in the scss/ folder, then save the compiled css in css/ folder every time we change a .scss file.
 
 - Run the Script
-  npm run scss
+  node-sass --watch scss -o css
